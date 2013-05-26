@@ -1,3 +1,10 @@
+# Karma, Istanbul
+/coverage
+!/coverage/.gitkeep
+
+# IDEs
+/.idea # Phpstorm files have nothing to do with this source code
+
 # Bootstrap
 app/bootstrap*
 
