@@ -4,12 +4,13 @@ basePath = '';
 files = [
   JASMINE,
   JASMINE_ADAPTER,
+  'app/Resources/public/js/require-config.js', // important that this config included before REQUIRE
   REQUIRE,
   REQUIRE_ADAPTER,
   {pattern: 'app/Resources/public/js/**/*.js', included: false},
   {pattern: 'src/**/*Bundle/Resources/**/*.js', included: false},
   {pattern: 'src/**/*Bundle/Tests/Resources/**/*.js', included: false},
-  'main.js',
+  'main.js'
 ];
 
 preprocessors = {
@@ -17,7 +18,7 @@ preprocessors = {
 };
 
 exclude = [
-    'src/**/*Bundle/Resources/**/main.js'
+    'src/**/*Bundle/Resources/**/main.js',
 ];
 
 // test results reporter to use

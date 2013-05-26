@@ -3,7 +3,7 @@
 !/coverage/.gitkeep
 
 # IDEs
-/.idea # Phpstorm files have nothing to do with this source code
+/.idea
 
 # Bootstrap
 app/bootstrap*
