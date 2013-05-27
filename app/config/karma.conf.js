@@ -23,6 +23,10 @@ exclude = [];
 // possible values: 'dots', 'progress', 'junit'
 reporters = ['progress', 'coverage'];
 
+coverageReporter = {
+    type : 'html',
+    dir : 'build/coverage/'
+}
 
 // web server port
 port = 9876;

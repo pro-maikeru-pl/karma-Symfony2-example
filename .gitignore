@@ -1,7 +1,3 @@
-# Karma, Istanbul
-/coverage
-!/coverage/.gitkeep
-
 # IDEs
 /.idea
 
