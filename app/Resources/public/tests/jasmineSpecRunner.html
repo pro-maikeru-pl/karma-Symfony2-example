@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Jasmine Spec Runner</title>
+    <script src="../js/require-config.js"></script>
+    <script src="../js/require.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="jasmine.css">
+
+    <script type="text/javascript" src="jasmine.js"></script>
+    <script type="text/javascript" src="jasmine-html.js"></script>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+
+    <script type="text/javascript" src="jasmine-jquery.js"></script>
+
+
+    <script type="text/javascript">
+        requirejs.config({
+            baseUrl: '../../../../src'
+        });
+        requirejs(['Acme/SomeModule/FooBundle/Tests/Resources/public/js/accountCreatorSpec'], function() {
+
+            (function() {
+                var jasmineEnv = jasmine.getEnv();
+                jasmineEnv.updateInterval = 1000;
+
+                var htmlReporter = new jasmine.HtmlReporter();
+
+                jasmineEnv.addReporter(htmlReporter);
+
+                jasmineEnv.specFilter = function(spec) {
+                    return htmlReporter.specFilter(spec);
+                };
+
+                var currentWindowOnload = window.onload;
+
+                window.onload = function() {
+                    if (currentWindowOnload) {
+                        currentWindowOnload();
+                    }
+                    execJasmine();
+                };
+
+                function execJasmine() {
+                    jasmineEnv.execute();
+                }
+
+            })();
+        });
+
+    </script>
+
+</head>
+
+<body>
+</body>
+</html>
