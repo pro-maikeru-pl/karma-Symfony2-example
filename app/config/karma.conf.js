@@ -1,4 +1,4 @@
-basePath = '';
+basePath = '../../';
 
 // list of files / patterns to load in the browser
 files = [
@@ -10,16 +10,14 @@ files = [
   {pattern: 'app/Resources/public/js/**/*.js', included: false},
   {pattern: 'src/**/*Bundle/Resources/**/*.js', included: false},
   {pattern: 'src/**/*Bundle/Tests/Resources/**/*.js', included: false},
-  'main.js'
+  'app/config/karma.runner.js'
 ];
 
 preprocessors = {
     'src/**/*Bundle/Resources/**/*.js': 'coverage'
 };
 
-exclude = [
-    'src/**/*Bundle/Resources/**/main.js',
-];
+exclude = [];
 
 // test results reporter to use
 // possible values: 'dots', 'progress', 'junit'
@@ -55,7 +53,7 @@ autoWatch = true;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['PhantomJS', 'Chrome'];
+browsers = ['PhantomJS'];
 
 
 // If browser does not capture in given timeout [ms], kill it

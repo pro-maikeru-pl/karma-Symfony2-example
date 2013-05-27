@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="../../../../../../../app/Resources/public/js/require-config.js"></script>
-    <script src="../../../../../../../app/Resources/public/js/require.js"></script>
+    <script src="../../../../../../../../app/Resources/public/js/require-config.js"></script>
+    <script src="../../../../../../../../app/Resources/public/js/require.js"></script>
     <script>
         requirejs.config({
-            baseUrl: '../../../../../../../src'
+            baseUrl: '../../../../../../../../src'
         });
-        requirejs(['jquery', 'AcmeFooBundle/accountCreator'], function($, accountCreator) {
+        requirejs(['jquery', 'AcmeSomeModuleFooBundle/accountCreator'], function($, accountCreator) {
             $(function() {
                 var account = accountCreator(0);
                 console.log(account.getBalance());
@@ -21,7 +21,6 @@
 </head>
 <body>
     <div id="fixture">
-        <
     </div>
 </body>
 </html>

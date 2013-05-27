@@ -1,4 +1,4 @@
-define(['AcmeFooBundle/accountCreator'], function (accountCreator) {
+define(['AcmeSomeModuleFooBundle/accountCreator'], function (accountCreator) {
     describe('Account', function () {
         var acc;
         beforeEach(function () {

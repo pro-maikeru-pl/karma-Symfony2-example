@@ -1,0 +1,16 @@
+<project name="karma-Symfony2-example">
+    <target name="test-ci">
+        <exec executable="karma">
+            <arg value="start"/>
+            <arg value="app/config/karma.conf.js"/>
+            <arg value="--single-run"/>
+        </exec>
+    </target>
+    <target name="test-watch">
+        <exec executable="karma">
+            <arg value="start"/>
+            <arg value="app/config/karma.conf.js"/>
+            <arg value=""/>
+        </exec>
+    </target>
+</project>
